@@ -1,0 +1,24 @@
+    <!--This is the content of the pages-->
+
+    <seach-product (searchValEmit)="searchValue($event)" ></seach-product> 
+    <selected-product-list [selectedProductValue]="selectedProductValueComp" *ngIf="selectProduct.selectedProduct" ></selected-product-list>
+    <list-product #selectProduct [displyBSearch]="searchVal" ></list-product>
+    
+   
+   <!-- ng-template -- will not displayed in HTML and we can use it where ever we want it is the reference variable
+    ng-container -- will be dispalyed in HTML,we cant use ngfor,ngif,ngswitch in same tag so we use --This
+    ng-content select="selector" -- if we want to dispaly inside the main selector we can specifed in that tag
+           we can put the selector class name so we can displayed in the child compontent
+           Eg:
+
+           <seach-product (searchValEmit)="searchValue($event)" >
+            <P class="pp">hi done</P>
+           </seach-product>
+
+           In select-product componetent HTML 
+
+        you can use 
+             <ng-content select=".pp"></ng-content>
+
+             so the content can be displayed
+            -->

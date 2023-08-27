@@ -1,0 +1,11 @@
+input:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px black;/*here change the color*/
+    border:1px solid black;/*here change the color*/
+}
+input:focus:hover {
+    outline: none;
+    box-shadow: 0px 0px 5px black;/*here change the color*/
+    border:1px solid black;/*here change the color*/
+    border-radius:0;
+}

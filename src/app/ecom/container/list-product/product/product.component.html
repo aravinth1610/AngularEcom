@@ -1,0 +1,17 @@
+    <div class="card" style="width: 18rem;">
+    <img [src]="product.images" class="card-img-top"  alt="...">
+    <p *ngIf="product.discountPercentage">{{ product.discountPercentage }}</p> <!--( 100 - (product.discountPercentage / product.price * 100)).toString }} -->
+    <span>{{product.stock}}</span>
+    <div class="card-body">
+      <div class="card-text">
+        <p>{{product.brand}}</p>
+        <h4>{{product.title}} <span *ngIf="product.rating<=4.50"></span></h4>  
+        <!-- <ng-container [ngStyle]="{fontweight:'bold',color:  product.rating <=450 ? 'Green' : 'Red' }" >Best Seller</ng-container>      -->
+        <p>{{product.description}}</p>
+        <h4>{{product.price | currency:'INR' }}</h4>
+        <p>{{product.rating}}</p>
+        <h5 [ngClass]="product.avaliable ? 'text-success' : 'text-danger' " >{{product.avaliable ? 'Avaliable In Strock' : 'Not Avaliable in stock' }}</h5>
+      </div>
+    </div>
+  </div>
+ 

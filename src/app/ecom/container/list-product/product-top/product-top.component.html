@@ -1,0 +1,18 @@
+
+<div class="p-3 m-3">
+<div class="form-check form-check-inline">
+    <label>Filter : </label>
+  </div>
+<div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" id="inlineCheckbox1" value="all" (change)="onChange()" [(ngModel)]="selectRadio">
+    <label class="form-check-label" for="inlineCheckbox1">{{'All('+all+')'}}</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" id="inlineCheckbox2" value="true" (change)="onChange()" [(ngModel)]="selectRadio">
+    <label class="form-check-label" for="inlineCheckbox2">{{'In Stock('+stock+')'}}</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" id="inlineCheckbox3" value="false" (change)="onChange()" [(ngModel)]="selectRadio">
+    <label class="form-check-label" for="inlineCheckbox3">{{'All('+OutStock+')'}}</label>
+  </div>
+</div>
